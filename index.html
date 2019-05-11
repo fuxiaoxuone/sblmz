@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title></title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link href="css/public.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script src="js/rem.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="bg1">
+		<img src="images/bg1.jpg"/>
+		<div class="btn1"></div>
+		<div class="arrow"><img src="images/arrow.png"/></div>
+	</div>
+	<div class="bg2">
+		<img src="images/bg2.jpg"/>
+		<div class="btn2"></div>
+		<div class="c c1"></div>
+		<div class="c c2"></div>
+		<div class="c c3"></div>
+	</div>
+	<div class="bg3">
+		<img src="images/bg3.jpg"/>
+		<div class="c c4"></div>
+		<div class="c c5"></div>
+	</div>
+	
+	
+	<div class="tc tc1">
+		<img src="images/c1.png"/>
+		<div class="close"></div>
+	</div>
+
+    
+
+	
+</body>
+	<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$('.bg1 .btn1').click(function(){
+			$('.bg1').addClass('sca');
+			setTimeout(function() {
+				$('.bg1').hide();
+				$("html").scrollLeft(50);
+				$('.bg2').show();
+			},1000)
+		})
+		$('.bg2 .btn2').click(function(){
+			$('.bg2').addClass('sca1');
+			setTimeout(function() {
+				$('.bg2').hide();
+				$("html").scrollLeft(0);
+				$('.bg3').show();
+			},1000)
+		})
+		$('.c').click(function(){
+			$('.tc1').fadeIn();
+		})
+		$('.tc').click(function(){
+			$('.tc').fadeOut();
+		})
+	</script>
+</html>
